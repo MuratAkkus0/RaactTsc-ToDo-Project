@@ -11,7 +11,7 @@ yani // export default memo(Header) seklinde kullanilabilir . Sadece büyük ve 
 
 lazy() ==> Componentleri lazy loading olarak yüklemek istediginde yani component sadece render edilme ihtiyaci duyuldugunda render edilmesini istediginde lazy fonksiyonunu import edip daha sonra en üstte diger importlari yaptigin yerde dinamik importla componentini import ederek layz loading yapabilirsin . // const LazyComponent = lazy(()=>import("src/components/LazyComponent"))
 
-<Profiler> ==> Bir componentin kac defa render edildigini , renderin ne kadar sürdügünü ve neden render edildigini görmemizi saglar . bu bilgileri istersek consola yazabiliriz. // örnek:
+Profiler ==> Bir componentin kac defa render edildigini , renderin ne kadar sürdügünü ve neden render edildigini görmemizi saglar . bu bilgileri istersek consola yazabiliriz. // örnek:
 
 ```
  <Profiler
