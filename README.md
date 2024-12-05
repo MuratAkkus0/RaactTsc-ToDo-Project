@@ -20,3 +20,22 @@ onRender={(id, phase, actualDration, baseDuration,startTime,commitTime) =>consol
   <ToDoCreate />
 </Profiler>
 ```
+
+Array.sort() ==> Bu fonksiyonun icerisine bir fonksiyon verilip ona göre siralama yaptirilabilir . // Örnek
+
+```js
+const numbers = [10, 2, 9, 1, 7];
+
+numbers.sort((a, b) => a - b); // Küçükten büyüğe sıralama
+
+console.log(numbers); // [1, 2, 7, 9, 10]
+
+// a - b küçükten büyüğe sıralar.
+// b - a büyükten küçüğe sıralar.
+
+/*
+Pozitif değer: a daha büyük, b daha küçük → b, anın önüne geçer.
+Negatif değer: a daha küçük, b daha büyük → a, bnin önünde kalır.
+0: İkisi eşitse yerleri değişmez.
+*/
+```
