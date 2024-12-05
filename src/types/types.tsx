@@ -6,3 +6,7 @@ export interface ToDo {
 export interface toDoInitialState {
   toDos: ToDo[];
 }
+
+export interface ToDoProps {
+  toDoProps: ToDo;
+}

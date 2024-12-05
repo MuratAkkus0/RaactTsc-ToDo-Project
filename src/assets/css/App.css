@@ -1,0 +1,142 @@
+*:not([data-sonner-toast]) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/dotted-bg2.avif");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.todo__input--container {
+  z-index: 1;
+  width: 40rem;
+  max-width: 700px;
+  height: 10rem;
+  max-height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  position: relative;
+}
+.todo__input--container::before {
+  content: "To Do App";
+  width: 45rem;
+  max-width: 800px;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+
+.todo__input {
+  width: 90%;
+  height: 2rem;
+  padding: 2px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.todo__input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+#addTodo {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s transform;
+  background-color: lightgray;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+#addTodo:hover {
+  transform: scale(1.05);
+}
+#addTodo:active {
+  transform: scale(0.97);
+}
+#addTodo > svg {
+  font-size: 1.2rem;
+}
+
+.clickable {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.clickable:hover {
+  transform: scale(1.05);
+}
+.clickable:active {
+  transform: scale(0.98);
+}
+
+.todo__list--container {
+  width: 40rem;
+  max-width: 700px;
+  height: fit-content;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.todo__list--item {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.todo--content {
+  flex: 1;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 3px;
+}
+.todo--content::first-letter {
+  text-transform: capitalize;
+}
+#editInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.todo--controls {
+  flex-shrink: 0;
+  width: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
